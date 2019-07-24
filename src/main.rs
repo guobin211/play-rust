@@ -3,8 +3,10 @@ mod sound;
 
 // 命名空间
 use std::io;
+use std::fs::File;
 use std::collections::{hash_map, HashMap};
 use crate::sound::instrument::{calculate_length, change};
+use std::io::ErrorKind;
 
 // 结构体
 struct Rectangle {
@@ -47,6 +49,19 @@ struct User {
 }
 
 fn main() {
+
+    let file = File::open("hello.txt");
+    let _f = match file {
+        Ok(res) => res,
+        Err(error) => match error.kind() {
+            ErrorKind::NotFound => match File::create("hello.txt") {
+                Ok(fc) => fc,
+                Err(error) => panic!("create a file with a problem: {:?}", error),
+            },
+            other_error => panic!("a problem opening the file: {:?}", other_error),
+        }
+    };
+
     let mut jack = User {
         username: String::from("jack"),
         email: String::from("211@gmail.com"),
@@ -95,6 +110,7 @@ fn main() {
     types();
     guest();
 }
+
 // 字符串截取
 fn first_word(s: &String) ->&str {
     let bytes = s.as_bytes();
