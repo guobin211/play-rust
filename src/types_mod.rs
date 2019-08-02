@@ -1,5 +1,6 @@
-
-
+/// types 公共模块
+/// run() 启动方法
+/// number_size() 私有方法
 pub mod types {
     pub fn run() {
         println!("hello rust types");
