@@ -8,7 +8,7 @@ pub mod types {
         number_string();
         tuple();
     }
-
+    /// 数字类型
     fn number_size() {
         let guest: u32 = "42".parse().expect("Not a number!");
         let count: i32 = -1000000;
@@ -20,7 +20,7 @@ pub mod types {
         println!("长度可变: {}", rich_number);
         println!("int to string: {}", guest.to_string());
     }
-
+    /// 数字转换
     fn number_string() {
         let decimal = 98_222;
         let hex = 0xff;
@@ -34,12 +34,12 @@ pub mod types {
         println!("binary 二进制: {}", binary);
         println!("byte 字节: {}", byte);
 
-        let _res = 9%5;
+        let _res = 9 % 5;
         println!("数学运算取余数 9 % 5：{}", _res);
     }
-
+    /// 元祖类型
     fn tuple() {
-        let tup:(i32, f32, u8) = (10, 5.5, 1);
+        let tup: (i32, f32, u8) = (10, 5.5, 1);
         let (x, y, z) = tup;
         println!("x: {}, y: {}, z: {}", x, y, z);
         let _person = "mary";
