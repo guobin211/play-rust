@@ -4,10 +4,20 @@
 pub mod types {
     pub fn run() {
         println!("hello rust types");
+        string_copy();
         number_size();
         number_string();
         tuple();
     }
+
+    fn string_copy() {
+        let s1 = String::from("hello");
+        // string复制
+        let s2 = s1.clone();
+        println!("{}, world! s1", s1);
+        println!("{}, world! s2", s2);
+    }
+
     // 数字类型
     fn number_size() {
         let guest: u32 = "42".parse().expect("Not a number!");
