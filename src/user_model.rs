@@ -1,3 +1,4 @@
+/// 公共模块 user
 pub mod user {
     /// 结构体, 添加debug信息
     #[derive(Debug)]

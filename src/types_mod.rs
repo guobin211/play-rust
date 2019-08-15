@@ -2,6 +2,7 @@
 /// run() 启动方法
 /// number_size() 私有方法
 pub mod types {
+
     pub fn run() {
         println!("hello rust types");
         string_copy();
@@ -28,7 +29,7 @@ pub mod types {
         println!("guest + amount: {}", res);
         println!("count: {}", count + 1000001);
         println!("长度可变: {}", rich_number);
-        println!("int to string: {}", guest.to_string());
+        println!("int to string: {:?}", guest);
     }
     // 数字转换
     fn number_string() {
