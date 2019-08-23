@@ -15,7 +15,7 @@ pub mod http {
             where F: FnOnce() + Send + 'static{}
     }
 
-    // 监听tcp端口
+    /// 监听tcp端口
     pub(crate) fn listen(asset: HashMap<&str, String>) {
         if asset.get("index")  != None {
             println!("{:?}", asset.get("index"));
@@ -30,7 +30,7 @@ pub mod http {
             });
         }
     }
-    // 处理单个的stream
+    /// 处理单个的stream
     fn handle_connection(mut stream: TcpStream) {
         let mut buffer = [0; 512];
         let get = b"GET / HTTP/1.1\r\n";

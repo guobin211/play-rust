@@ -10,12 +10,12 @@ pub mod user {
     }
     /// 添加结构体的实现方法
     impl User {
-        // getter
+        /// getter
         pub fn get_name(&self) -> &str {
             // 返回引用
             return self.username.as_str();
         }
-        // setter
+        /// setter
         pub fn set_name(&mut self, name: String) {
             self.username = name;
         }

@@ -19,7 +19,7 @@ pub mod types {
         println!("{}, world! s2", s2);
     }
 
-    // 数字类型
+    /// 数字类型
     fn number_size() {
         let guest: u32 = "42".parse().expect("Not a number!");
         let count: i32 = -1000000;
@@ -31,7 +31,7 @@ pub mod types {
         println!("长度可变: {}", rich_number);
         println!("int to string: {:?}", guest);
     }
-    // 数字转换
+    /// 数字转换
     fn number_string() {
         let decimal = 98_222;
         let hex = 0xff;
@@ -48,7 +48,7 @@ pub mod types {
         let _res = 9 % 5;
         println!("数学运算取余数 9 % 5：{}", _res);
     }
-    // 元祖类型
+    /// 元祖类型
     fn tuple() {
         let tup: (i32, f32, u8) = (10, 5.5, 1);
         let (x, y, z) = tup;
