@@ -2,7 +2,6 @@
 /// run() 启动方法
 /// number_size() 私有方法
 pub mod types {
-
     pub fn run() {
         println!("hello rust types");
         string_copy();
@@ -31,6 +30,7 @@ pub mod types {
         println!("长度可变: {}", rich_number);
         println!("int to string: {:?}", guest);
     }
+
     /// 数字转换
     fn number_string() {
         let decimal = 98_222;
@@ -48,6 +48,7 @@ pub mod types {
         let _res = 9 % 5;
         println!("数学运算取余数 9 % 5：{}", _res);
     }
+
     /// 元祖类型
     fn tuple() {
         let tup: (i32, f32, u8) = (10, 5.5, 1);

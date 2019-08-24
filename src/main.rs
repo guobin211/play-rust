@@ -1,18 +1,43 @@
-// 声明引入模块
-mod types_mod;
-mod user_model;
+/// 导入外部库
+extern crate rustc_serialize;
 
-// 使用命名空间mod
-use types_mod::types;
-use user_model::user;
+/// 使用外部库模块
+use rustc_serialize::json;
 
-// 启动入口
+/// 导入内部库
+//mod types_mod;
+//mod user_mod;
+
+/// 内部库模块
+//use types_mod::types;
+//use user_mod::user;
+
+
+/// 定义结构体
+#[derive(RustcDecodable, RustcEncodable)]
+pub struct TestStruct {
+    id: u8,
+    name: String,
+    books: Vec<String>,
+}
+
+/// 启动入口
 fn main() {
-    user::run();
-    let name = "jack";
-    let mut user1: user::User = user::create_user(name.parse().unwrap(), 22);
-    println!("user: {:?}", user1);
-    user1.set_name(String::from("tom"));
-    println!("user: {:?}", user1);
-    println!("user name: {}", user1.get_name());
+    /// 实例化
+    let object = TestStruct {
+        id: 1,
+        name: "tom".to_string(),
+        books: vec!["EN".to_string(), "ZH".to_string()],
+    };
+    println!("id: {}", object.id);
+    println!("name: {}", object.name);
+    println!("books: {:?}", object.books);
+
+    // Serialize using `json::encode`
+    let encoded = json::encode(&object).unwrap();
+    println!("{}", encoded);
+
+    // Deserialize using `json::decode`
+    let _decoded: TestStruct = json::decode(&encoded).unwrap();
+    println!("name: {}", _decoded.name);
 }
