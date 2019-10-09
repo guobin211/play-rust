@@ -5,12 +5,12 @@ extern crate rustc_serialize;
 use rustc_serialize::json;
 
 /// 导入内部库
-//mod types_mod;
-//mod user_mod;
+mod types_mod;
+mod user_mod;
 
 /// 内部库模块
-//use types_mod::types;
-//use user_mod::user;
+use types_mod::types;
+use user_mod::user;
 
 
 /// 定义结构体
@@ -23,7 +23,7 @@ pub struct TestStruct {
 
 /// 启动入口
 fn main() {
-    /// 实例化
+    // 实例化
     let object = TestStruct {
         id: 1,
         name: "tom".to_string(),
