@@ -1,3 +1,4 @@
-## play-rust
+## Rust WebView App
 
-### 尝试一下rust的风格
+### 更小体积的App
+
