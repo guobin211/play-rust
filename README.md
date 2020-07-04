@@ -1,4 +1,12 @@
 ## Rust WebView App
 
-### 更小体积的App
+### Use React
+
+```md
+    
+    build web no souceMap
+    
+    use dist for rust
+
+```
 
