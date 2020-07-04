@@ -1,0 +1,14 @@
+html,body {
+  margin: 0;
+  padding: 0;
+  font-family: serif, Menlo, sans-serif, "Microsoft Sans Serif";
+  font-size: 16px;
+}
+
+#app{
+  background: #f2f3f5;
+}
+button:focus {
+  outline: none;
+  border-image: none;
+}

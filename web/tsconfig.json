@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": "../web",
+    "paths": {
+      "~*": ["./*"]
+    },
+    "outDir": "./dist",
+    "target": "ES2016",
+    "sourceMap": false,
+    "lib": [
+      "ES2020",
+      "ES2015",
+      "ES2016",
+      "ES2017",
+      "ES2018",
+      "ES2019",
+      "DOM"
+    ],
+    "jsx": "react"
+  },
+  "include": ["web/**/*"]
+}
