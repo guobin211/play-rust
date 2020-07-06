@@ -18,5 +18,5 @@
     ],
     "jsx": "react"
   },
-  "include": ["web/**/*"]
+  "include": ["web/**/*", "web/src/**"]
 }

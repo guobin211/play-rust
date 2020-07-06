@@ -29,7 +29,7 @@ fn main() {
         scripts = inline_script(include_str!("../web/dist/main.172c23a0.js"))
     );
 
-    web_view::builder()
+    let window= web_view::builder()
         .title("WebApp")
         .content(Content::Html(html_content))
         .size(320, 480)
